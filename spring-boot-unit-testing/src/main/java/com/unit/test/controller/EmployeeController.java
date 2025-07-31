@@ -29,6 +29,11 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
+    @GetMapping("/hello")
+    public String hello() {
+    	return "Hello Lakhan, This is CI-CD Pipeline project.....!";
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Employee createEmployee(@RequestBody Employee employee){
